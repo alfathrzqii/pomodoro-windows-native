@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="timer-card">
+        <div class="modes">
+          <button id="mode-work" class="mode-btn active">Work</button>
+          <button id="mode-short-break" class="mode-btn">Short Break</button>
+          <button id="mode-long-break" class="mode-btn">Long Break</button>
+        </div>
+
+        <h1 id="timer-display">25:00</h1>
+        <p id="status-text">Ready to focus</p>
+
+        <div class="controls">
+          <button id="btn-start" class="btn primary">Start</button>
+          <button id="btn-pause" class="btn warning hidden">Pause</button>
+          <button id="btn-reset" class="btn secondary">Reset</button>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h2>Settings</h2>
+        <div class="settings-grid">
+          <div class="setting-item">
+            <label for="input-work">Work (min)</label>
+            <input type="number" id="input-work" value="25" min="1" max="999" />
+          </div>
+          <div class="setting-item">
+            <label for="input-short-break">Short Break (min)</label>
+            <input type="number" id="input-short-break" value="5" min="1" max="999" />
+          </div>
+          <div class="setting-item">
+            <label for="input-long-break">Long Break (min)</label>
+            <input type="number" id="input-long-break" value="15" min="1" max="999" />
+          </div>
+        </div>
+        <button id="btn-save-settings" class="btn full-width">Save Settings</button>
+      </div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
